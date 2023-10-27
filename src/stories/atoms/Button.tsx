@@ -4,7 +4,7 @@ import { useMemo } from "react";
 type Props = {
   icon?: React.ReactNode;
   className?: string;
-  color: "primary" | "secondary";
+  color: "primary" | "secondary" | "danger";
   size: "sm" | "md" | "lg";
   variant: "solid" | "outline" | "ghost";
 };
@@ -41,7 +41,7 @@ export const Button = ({
       <div>
         <button
           className={clsx(
-            "px-4 py-2 rounded-md font-semibold text-lg",
+            "px-4 py-2 rounded-md font-semibold text-lg transition-all duration-200",
             primaryStyle
           )}
         >
