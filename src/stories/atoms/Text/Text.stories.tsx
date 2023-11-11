@@ -1,14 +1,19 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Text } from "./Text";
+import { Meta, StoryObj } from "@storybook/react"
+import { Text } from "./Text"
 
 const meta: Meta<typeof Text> = {
   component: Text,
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Text>
 
-export const Primary: Story = {
-  render: () => <Text />,
-};
+export const Default: Story = {
+  args: {
+    children: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    variant: "caption",
+    color: "primary",
+    weigth: "normal",
+  },
+}
